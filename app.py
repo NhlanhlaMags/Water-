@@ -57,7 +57,7 @@ Our model predicts whether water is safe or unsafe using **chemical properties**
 def load_model():
     try:
         current_dir = Path(__file__).parent
-        model_path = current_dir / "Random_pipeline.pkl"
+        model_path = current_dir / "Random.pkl"
         if not os.path.exists(model_path):
             model_path = "Random.pkl"
         if not os.path.exists(model_path):
