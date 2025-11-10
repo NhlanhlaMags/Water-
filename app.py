@@ -169,6 +169,68 @@ elif mode == "📂 Batch CSV Upload":
     else:
         st.info("Please upload a CSV file to continue.")
 
+ ---------------------------
+# Model Insights Section
+# ---------------------------
+st.markdown("---")
+st.subheader("📊 Model Insights")
+
+# Demo metrics (replace with real model metrics)
+accuracy = 0.85
+precision = 0.82
+recall = 0.80
+f1 = 0.81
+
+st.markdown(f"""
+**Model Performance (Demo Metrics):**
+- Accuracy: {accuracy}
+- Precision: {precision}
+- Recall: {recall}
+- F1 Score: {f1}
+""")
+
+# Feature importance using Streamlit only (no matplotlib)
+st.markdown("**Feature Importance:**")
+
+# You'll need to get the actual feature importances from your trained model
+# For Random Forest (if that's your final model), you can access model.feature_importances_
+# Make sure the feature names match the order of features used during training
+# For now, using placeholder data
+feature_data = pd.DataFrame({
+    'Feature': ['ph', 'Hardness', 'Solids', 'Chloramines', 'Sulfate',
+                'Conductivity', 'Organic_carbon', 'Trihalomethanes', 'Turbidity'],
+    'Importance': [0.15, 0.12, 0.10, 0.08, 0.08, 0.07, 0.06, 0.05, 0.04]
+})
+
+# Display as bar chart using Streamlit
+st.bar_chart(feature_data.set_index('Feature'))
+
+# Or display as table
+st.dataframe(feature_data.sort_values('Importance', ascending=False))
+
+# ---------------------------
+# Meet the Team Section
+# ---------------------------
+st.markdown("---")
+st.subheader("👩‍💻 Meet the Team")
+st.markdown("""
+1. **Snenhlanhla Nsele** - Data Scientist - [LinkedIn](https://www.linkedin.com/in/sinenhlanhla-nsele-126a6a18a)
+2. **Nonhlanhla Magagula** - Data Scientist - [LinkedIn](https://www.linkedin.com/in/nonhlanhla-magagula-b741b3207)
+3. **Thandiwe Mkhabela** - Data Scientist - [LinkedIn](https://www.linkedin.com/in/thandiwe-m)
+4. **Thabiso Seema** - Software Engineer - [LinkedIn](https://www.linkedin.com/in/thabisoseema)
+""")
+
+# ---------------------------
+# Model Versioning Info
+# ---------------------------
+st.markdown("---")
+st.subheader("🧩 Model Versioning Info")
+st.markdown("""
+- **Model Version:** 1.0
+- **Last Updated:** Nov 2025
+- **Training Data:** 3,000+ samples
+""")
+
 # ---------------------------
 # Footer
 # ---------------------------
