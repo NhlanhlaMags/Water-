@@ -169,7 +169,7 @@ elif mode == "📂 Batch CSV Upload":
     else:
         st.info("Please upload a CSV file to continue.")
 
- ---------------------------
+---------------------------
 # Model Insights Section
 # ---------------------------
 st.markdown("---")
