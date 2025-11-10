@@ -59,7 +59,7 @@ def load_model():
         current_dir = Path(__file__).parent
         model_path = current_dir / "Random_pipeline.pkl"
         if not os.path.exists(model_path):
-            model_path = "Random_pipeline.pkl"
+            model_path = "Random.pkl"
         if not os.path.exists(model_path):
             st.error("❌ Model file not found. Please ensure 'Random_pipeline.pkl' exists.")
             return None
