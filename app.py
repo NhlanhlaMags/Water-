@@ -119,7 +119,7 @@ def load_model():
 
         # Use correct relative path for the model trained on scores only
         # Make sure you save a pipeline trained ONLY on scaled safety_score and contamination_risk
-        model_path = current_dir / "rf_pipeline_scores_only.pkl" # Suggested new model file name
+        model_path = current_dir / "Random_pipeline.pkl"
 
         # Debug output
         st.write(f"Loading model from: {model_path}")
